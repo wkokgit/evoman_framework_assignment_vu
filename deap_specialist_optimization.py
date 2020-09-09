@@ -3,7 +3,8 @@
 # Author: Karine Miras         #
 # karine.smiras@gmail.com      #
 ################################
-
+import sys
+sys.path.insert(0, "evoman")
 from demo_controller import player_controller
 from environment import Environment
 import numpy as np
@@ -12,10 +13,9 @@ from deap import tools
 from deap import creator
 from deap import base
 import random
-import sys
+
 import os
 
-sys.path.insert(0, "evoman")
 
 
 experiment_name = "deap_specialist_optimization"
@@ -40,7 +40,7 @@ POP_SIZE = 4  # Population size
 GENS = 5  # Amount of generations
 CXPB = 0.5  # CXPB  is the probability with which two individuals are crossed
 MUTPB = 0.2  # MUTPB is the probability for mutating an individual
-
+toolbox = base.Toolbox()
 
 def evaluate(individual):
     f, p, e, t = env.play(
@@ -61,7 +61,7 @@ def setupDEAP():
     creator.create("FitnessMax", base.Fitness, weights=(-1.0, 1.0))
     creator.create("Individual", list, fitness=creator.FitnessMax)
 
-    toolbox = base.Toolbox()
+
     # Attribute generator
     toolbox.register("attr_bool", random.randint, -1, 1)
     # Structure initializers
@@ -114,35 +114,34 @@ def evolution(pop, fits):
         crossover(offspring)
         mutation(offspring)
 
-         # Evaluate the individuals with an invalid fitness
-         invalid_ind = [ind for ind in offspring if not ind.fitness.valid]
-          fitnesses = map(toolbox.evaluate, invalid_ind)
-           for ind, fit in zip(invalid_ind, fitnesses):
-                ind.fitness.values = [fit]
+        # Evaluate the individuals with an invalid fitness
+        invalid_ind = [ind for ind in offspring if not ind.fitness.valid]
+        fitnesses = map(toolbox.evaluate, invalid_ind)
+        for ind, fit in zip(invalid_ind, fitnesses):
+            ind.fitness.values = [fit]
 
-            pop[:] = offspring
+        pop[:] = offspring
 
-            # Gather all the fitnesses in one list and print the stats
-            fits = [ind.fitness.values[0] for ind in pop]
+        # Gather all the fitnesses in one list and print the stats
+        fits = [ind.fitness.values[0] for ind in pop]
 
-            length = len(pop)
-            mean = sum(fits) / length
-            sum2 = sum(x * x for x in fits)
-            std = abs(sum2 / length - mean ** 2) ** 0.5
+        length = len(pop)
+        mean = sum(fits) / length
+        sum2 = sum(x * x for x in fits)
+        std = abs(sum2 / length - mean ** 2) ** 0.5
 
-            print("  Min %s" % min(fits))
-            print("  Max %s" % max(fits))
-            print("  Avg %s" % mean)
-            print("  Std %s" % std)
-            print(fits)
-            print(pop)
-            best = fits.index(max(fits))
-            np.savetxt(experiment_name + "/best.txt", pop[best])
+        print("  Min %s" % min(fits))
+        print("  Max %s" % max(fits))
+        print("  Avg %s" % mean)
+        print("  Std %s" % std)
+        print(fits)
+        print(pop)
+        best = fits.index(max(fits))
+        np.savetxt(experiment_name + "/best.txt", pop[best])
 
-            solutions = [pop, fit]
-            env.update_solutions(solutions)
-            env.save_state()
-
+        solutions = [pop, fit]
+        env.update_solutions(solutions)
+        env.save_state()
 
 
 def main():
