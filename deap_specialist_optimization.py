@@ -22,14 +22,14 @@ experiment_name = "deap_specialist_optimization"
 if not os.path.exists(experiment_name):
     os.makedirs(experiment_name)
 
-# n_hidden_neurons = 10
+n_hidden_neurons = 10
 
 # initializes simulation in individual evolution mode, for single static enemy.
 env = Environment(
     experiment_name=experiment_name,
     enemies=[2],
     playermode="ai",
-    # player_controller=player_controller(n_hidden_neurons),
+    player_controller=player_controller(n_hidden_neurons),
     enemymode="static",
     level=2,
     speed="fastest",
@@ -41,6 +41,7 @@ GENS = 5  # Amount of generations
 CXPB = 0.5  # CXPB  is the probability with which two individuals are crossed
 MUTPB = 0.2  # MUTPB is the probability for mutating an individual
 toolbox = base.Toolbox()
+n_vars = (env.get_num_sensors()+1)*n_hidden_neurons + (n_hidden_neurons+1)*5
 
 def evaluate(individual):
     f, p, e, t = env.play(
@@ -59,14 +60,14 @@ def setupDEAP():
     """
 
     creator.create("FitnessMax", base.Fitness, weights=(-1.0, 1.0))
-    creator.create("Individual", list, fitness=creator.FitnessMax)
+    creator.create("Individual", np.ndarray, fitness=creator.FitnessMax)
 
 
     # Attribute generator
-    toolbox.register("attr_bool", random.randint, -1, 1)
+    toolbox.register("attr_float", random.uniform, -1, 1)
     # Structure initializers
     toolbox.register(
-        "individual", tools.initRepeat, creator.Individual, toolbox.attr_bool, 1
+        "individual", tools.initRepeat, creator.Individual, toolbox.attr_float, n_vars
     )
     toolbox.register("population", tools.initRepeat, list, toolbox.individual)
 
@@ -134,12 +135,10 @@ def evolution(pop, fits):
         print("  Max %s" % max(fits))
         print("  Avg %s" % mean)
         print("  Std %s" % std)
-        print(fits)
-        print(pop)
         best = fits.index(max(fits))
         np.savetxt(experiment_name + "/best.txt", pop[best])
 
-        solutions = [pop, fit]
+        solutions = [pop, fits]
         env.update_solutions(solutions)
         env.save_state()
 
