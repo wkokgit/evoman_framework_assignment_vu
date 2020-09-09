@@ -7,6 +7,15 @@
 # imports framework
 import sys, os
 sys.path.insert(0, 'evoman')
+import random
+
+from deap import base
+from deap import creator
+from deap import tools
+import array
+import numpy
+
+from deap import algorithms
 from environment import Environment
 from demo_controller import player_controller
 
@@ -42,3 +51,15 @@ env.play()
 
 # SELECTION
 
+
+# BEGIN
+# INITIALISE population with random candidate solutions;
+# EVALUATE each candidate;
+# REPEAT UNTIL ( TERMINATION CONDITION is satisfied ) DO
+# 1 SELECT parents;
+# 2 RECOMBINE pairs of parents;
+# 3 MUTATE the resulting offspring;
+# 4 EVALUATE new candidates;
+# 5 SELECT individuals for the next generation;
+# OD
+# END
