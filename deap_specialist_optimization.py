@@ -16,8 +16,6 @@ import random
 
 import os
 
-
-
 experiment_name = "deap_specialist_optimization"
 if not os.path.exists(experiment_name):
     os.makedirs(experiment_name)
@@ -43,45 +41,72 @@ MUTPB = 0.2  # MUTPB is the probability for mutating an individual
 toolbox = base.Toolbox()
 n_vars = (env.get_num_sensors()+1)*n_hidden_neurons + (n_hidden_neurons+1)*5
 
-def evaluate(individual):
-    f, p, e, t = env.play(
-        pcont=individual
-    )  # return fitness, self.player.life, self.enemy.life, self.time
-    return f
+def evaluate(pop):
+    """
+    This function will start a game with one individual from the population
+
+    Args:
+        individual (np.ndarray of Floats between -1 and 1): One individual from the population
+
+    Returns:
+        Float: Fitness
+    """
+    for ind in pop:
+        f, p, e, t = env.play(
+            pcont=ind
+        )  # return fitness, self.player.life, self.enemy.life, self.time
+        ind.fitness.values = [f]
 
 
 def setupDEAP():
     """
-        This function sets up the DEAP environment.
+    This function sets up the DEAP environment to our liking.
 
-        For more information about which examples are used and the DEAP documentation:
-            # https://deap.readthedocs.io/en/master/
-            # https://deap.readthedocs.io/en/master/examples/ga_onemax.html
+    creator.create is used to create a class under a certain name
+    toolbox.register is used to register a function under a certain name which can be called
+
+    For more information about which examples are used and the DEAP documentation:
+        # https://deap.readthedocs.io/en/master/
+        # https://deap.readthedocs.io/en/master/examples/ga_onemax.html
     """
+    # this tells DEAP that the fitness should be as high as possible. (therefore Max)
+    creator.create("FitnessMax", base.Fitness, weights=(1.0,))
 
-    creator.create("FitnessMax", base.Fitness, weights=(-1.0, 1.0))
+    # an individual is a np.ndarray filled with random floats which are the inputs of the game
     creator.create("Individual", np.ndarray, fitness=creator.FitnessMax)
-
-
-    # Attribute generator
     toolbox.register("attr_float", random.uniform, -1, 1)
-    # Structure initializers
+
+    # registers function to create an individual
+    # n_vars is the amount of floats in the individual
     toolbox.register(
         "individual", tools.initRepeat, creator.Individual, toolbox.attr_float, n_vars
     )
+
+    # registers function to create the population of individuals
     toolbox.register("population", tools.initRepeat, list, toolbox.individual)
 
+    # registers function which links to our evaluate function
     toolbox.register("evaluate", evaluate)
-    toolbox.register("mate", tools.cxUniform, indpb=0.2)
+
+    # registers crossover function: We use One Point Crossover
+    toolbox.register("mate", tools.cxOnePoint)
+
+    # registers mutation function: We use bit-flipping
     toolbox.register("mutate", tools.mutFlipBit, indpb=0.2)
-    toolbox.register("select", tools.selTournament, tournsize=2)
+
+    # registers selection function: We select the best individuals.
+    toolbox.register("select", tools.selBest)
+    #toolbox.register("select", tools.selTournament, tournsize=2)
 
 
 def crossover(offspring):
-    """[summary]
+    """
+    'In evolutionary computing, the combination of features from two individuals
+    in offspring is often called crossover (or recombination).'
+    We currently use one point crossover.
 
     Args:
-        offspring ([type]): [description]
+        offspring (List of individuals): Selected offspring from the population
     """
     for child1, child2 in zip(offspring[::2], offspring[1::2]):
         if random.random() < CXPB:
@@ -91,42 +116,65 @@ def crossover(offspring):
 
 
 def mutation(offspring):
+    """
+    'Mutation is applied to the offspring delivered by crossover.'
+    'the most common mutation operator for binary encodings considers each gene separately and
+    allows each bit to flip (i.e., from 1 to 0 or 0 to 1) with a small probability pm.'
+    We currently use bit-flipping
+
+    Args:
+        offspring (List of individuals): Selected offspring from the population
+    """
     for mutant in offspring:
         if random.random() < MUTPB:
             toolbox.mutate(mutant)
             del mutant.fitness.values
 
 
-def evolution(pop, fits):
-    currentG = 0
+def evolution(pop):
+    """
+    Evolution Steps:
+    1. Select next generation of individuals form population
+    2. Clone is used (I think) to let the DEAP algorithm know it is a new generation
+    3. Apply Crossover on the offspring
+    4. Apply Mutation on the offspring
+    5. Evaluate individuals that have been change due to crossover or mutation
+    6. Show statistics of the fitness levels of the population
+    7. Save best individual of that run
+    8. Update environment solutions
 
-    # Begin the evolution
-    while max(fits) < 100 and currentG < GENS:
-        # New generation
+    Args:
+        pop (list): A list containing individuals
+    """
+    currentG = 0
+    while currentG < GENS:
         currentG = currentG + 1
         print("-- Generation %i --" % currentG)
-        # Select the next generation individuals
-        offspring = toolbox.select(pop, len(pop))
 
-        # Clone the selected individuals
-        offspring = list(map(toolbox.clone, offspring))
+        # 1.
+        selected = toolbox.select(pop, len(pop))
 
-        # Apply crossover and mutation on the offspring
+        # 2.
+        offspring = list(map(toolbox.clone, selected))
+
+        # It is IMPORTANT to know when crossover or mutation happens,
+        # the fitness value of that individual is deleted because
+        # the individual changed. Therefore we evaluate these individuals again.
+
+        #3.
         crossover(offspring)
+
+        #4.
         mutation(offspring)
 
-        # Evaluate the individuals with an invalid fitness
-        invalid_ind = [ind for ind in offspring if not ind.fitness.valid]
-        fitnesses = map(toolbox.evaluate, invalid_ind)
-        for ind, fit in zip(invalid_ind, fitnesses):
-            ind.fitness.values = [fit]
+        #5.
+        invalid_inds = [ind for ind in offspring if not ind.fitness.valid]
+        toolbox.evaluate(invalid_inds)
 
-        pop[:] = offspring
+        # 6.
+        fits = [ind.fitness.values[0] for ind in offspring]
 
-        # Gather all the fitnesses in one list and print the stats
-        fits = [ind.fitness.values[0] for ind in pop]
-
-        length = len(pop)
+        length = len(offspring)
         mean = sum(fits) / length
         sum2 = sum(x * x for x in fits)
         std = abs(sum2 / length - mean ** 2) ** 0.5
@@ -135,44 +183,38 @@ def evolution(pop, fits):
         print("  Max %s" % max(fits))
         print("  Avg %s" % mean)
         print("  Std %s" % std)
-        best = fits.index(max(fits))
-        np.savetxt(experiment_name + "/best.txt", pop[best])
 
-        solutions = [pop, fits]
+        # 7.
+        best = fits.index(max(fits))
+        np.savetxt(experiment_name + "/best.txt", offspring[best])
+
+        # 8.
+        solutions = [offspring, fits]
         env.update_solutions(solutions)
         env.save_state()
 
 
 def main():
+    """
+    This is the start of the program.
+    Program  Steps:
+    1. Setup Deap Environment
+    2. Initialize Population of individuals
+    3. Evaluate population by playing the game and assigning fitness levels
+    4. Start Evolution
+    """
+
+    # 1.
     setupDEAP()
-    # INITIALIZE POPULATION
+
+    # 2.
+    print("-- Form Population --")
     pop = toolbox.population(n=POP_SIZE)
 
-    # EVALUATE EACH CANDIDATE
-    fitnesses = list(map(toolbox.evaluate, pop))
+    # 3.
+    toolbox.evaluate(pop)
 
-    # still need to figure out what this does
-    for ind, fit in zip(pop, fitnesses):
-        ind.fitness.values = [fit]
-    fits = [ind.fitness.values[0] for ind in pop]
-
-    evolution(pop, fits)
-
+    # 4.
+    evolution(pop)
 
 main()
-
-
-# INITIALISE population with random candidate solutions;
-# EVALUATE each candidate;
-
-# BEGIN
-# REPEAT UNTIL ( TERMINATION CONDITION is satisfied ) DO
-# 1 SELECT parents;
-# 2 RECOMBINE pairs of parents;
-# 3 MUTATE the resulting offspring;
-# 4 EVALUATE new candidates;
-# 5 SELECT individuals for the next generation;
-# OD
-# END
-
-# env.state_to_log() # checks environment state
