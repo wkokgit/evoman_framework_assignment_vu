@@ -134,7 +134,7 @@ def mutation(offspring):
 def evolution(pop):
     """
     Evolution Steps:
-    1. Select next generation of individuals form population
+    1. Select next generation of individuals from population
     2. Clone is used (I think) to let the DEAP algorithm know it is a new generation
     3. Apply Crossover on the offspring
     4. Apply Mutation on the offspring
