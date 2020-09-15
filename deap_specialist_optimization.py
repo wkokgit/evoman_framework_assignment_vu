@@ -131,6 +131,33 @@ def mutation(offspring):
             del mutant.fitness.values
 
 
+def configureResults(pop, generation):
+    fits = [ind.fitness.values[0] for ind in pop]
+
+    length = len(pop)
+    mean = sum(fits) / length
+    sum2 = sum(x * x for x in fits)
+    std = abs(sum2 / length - mean ** 2) ** 0.5
+    maxFitness = max(fits)
+
+    print("  Min %s" % min(fits))
+    print("  Max %s" % maxFitness)
+    print("  Avg %s" % mean)
+    print("  Std %s" % std)
+
+    # 7.
+    best = fits.index(maxFitness)
+    np.savetxt(experiment_name + "/best.txt", pop[best])
+
+    # save results of each generation
+    file_aux  = open(experiment_name+'/results.txt','a')
+    file_aux.write('\n\ngen best mean std')
+    file_aux.write('\n'+str(generation)+' '+str(round(maxFitness,6))+' '+str(round(mean,6))+' '+str(round(std,6))   )
+    file_aux.close()
+
+    return fits
+
+
 def evolution(pop):
     """
     Evolution Steps:
@@ -139,9 +166,8 @@ def evolution(pop):
     3. Apply Crossover on the offspring
     4. Apply Mutation on the offspring
     5. Evaluate individuals that have been change due to crossover or mutation
-    6. Show statistics of the fitness levels of the population
-    7. Save best individual of that run
-    8. Update environment solutions
+    6. Show statistics of the fitness levels of the population and save best individual of that run
+    7. Update environment solutions
 
     Args:
         pop (list): A list containing individuals
@@ -172,23 +198,9 @@ def evolution(pop):
         toolbox.evaluate(invalid_inds)
 
         # 6.
-        fits = [ind.fitness.values[0] for ind in offspring]
-
-        length = len(offspring)
-        mean = sum(fits) / length
-        sum2 = sum(x * x for x in fits)
-        std = abs(sum2 / length - mean ** 2) ** 0.5
-
-        print("  Min %s" % min(fits))
-        print("  Max %s" % max(fits))
-        print("  Avg %s" % mean)
-        print("  Std %s" % std)
+        fits = configureResults(offspring, currentG)
 
         # 7.
-        best = fits.index(max(fits))
-        np.savetxt(experiment_name + "/best.txt", offspring[best])
-
-        # 8.
         solutions = [offspring, fits]
         env.update_solutions(solutions)
         env.save_state()
@@ -201,6 +213,7 @@ def main():
     1. Setup Deap Environment
     2. Initialize Population of individuals
     3. Evaluate population by playing the game and assigning fitness levels
+    4. Show and save results for that population
     4. Start Evolution
     """
 
@@ -215,6 +228,9 @@ def main():
     toolbox.evaluate(pop)
 
     # 4.
+    configureResults(pop, 0)
+
+    # 5.
     evolution(pop)
 
 main()
