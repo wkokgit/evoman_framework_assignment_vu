@@ -165,7 +165,7 @@ def evolution(pop):
     2. Clone is used (I think) to let the DEAP algorithm know it is a new generation
     3. Apply Crossover on the offspring
     4. Apply Mutation on the offspring
-    5. Evaluate individuals that have been change due to crossover or mutation
+    5. Evaluate individuals that have been changed due to crossover or mutation
     6. Show statistics of the fitness levels of the population and save best individual of that run
     7. Update environment solutions
 
@@ -194,8 +194,8 @@ def evolution(pop):
         mutation(offspring)
 
         #5.
-        invalid_inds = [ind for ind in offspring if not ind.fitness.valid]
-        toolbox.evaluate(invalid_inds)
+        changed_individuals = [ind for ind in offspring if not ind.fitness.valid]
+        toolbox.evaluate(changed_individuals)
 
         # 6.
         fits = configureResults(offspring, currentG)
