@@ -149,7 +149,7 @@ def configureResults(pop, generation):
     best = fits.index(maxFitness)
     np.savetxt(experiment_name + "/best.txt", pop[best])
 
-    # save results of each generation
+    # save result of each generation
     file_aux  = open(experiment_name+'/results.txt','a')
     file_aux.write('\n\ngen best mean std')
     file_aux.write('\n'+str(generation)+' '+str(round(maxFitness,6))+' '+str(round(mean,6))+' '+str(round(std,6))   )
@@ -197,11 +197,14 @@ def evolution(pop):
         changed_individuals = [ind for ind in offspring if not ind.fitness.valid]
         toolbox.evaluate(changed_individuals)
 
-        # 6.
-        fits = configureResults(offspring, currentG)
+        # Replace old population by offspring
+        pop[:] = offspring
 
+        # 6.
+        fits = configureResults(pop, currentG)
+        print(fits)
         # 7.
-        solutions = [offspring, fits]
+        solutions = [pop, fits]
         env.update_solutions(solutions)
         env.save_state()
 
