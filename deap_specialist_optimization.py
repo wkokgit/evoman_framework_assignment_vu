@@ -94,9 +94,9 @@ def setupDEAP():
     # registers mutation function: We use bit-flipping
     toolbox.register("mutate", tools.mutFlipBit, indpb=0.2)
 
-    # registers selection function: We select the best individuals.
-    toolbox.register("select", tools.selBest)
-    #toolbox.register("select", tools.selTournament, tournsize=2)
+    # registers selection function: We select from a tournament of individuals.
+    #toolbox.register("select", tools.selBest)
+    toolbox.register("select", tools.selTournament, tournsize=2)
 
 
 def crossover(offspring):
@@ -172,6 +172,8 @@ def evolution(pop):
     Args:
         pop (list): A list containing individuals
     """
+    generation0 = [ind.fitness.values[0] for ind in pop]
+    print(generation0)
     currentG = 0
     while currentG < GENS:
         currentG = currentG + 1
