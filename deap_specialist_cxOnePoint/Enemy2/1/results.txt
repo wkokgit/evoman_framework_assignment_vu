@@ -1,0 +1,19 @@
+
+
+gen best mean std
+0 84.61004 17.102763 38.976274
+
+gen best mean std
+1 84.61004 39.584172 45.026777
+
+gen best mean std
+2 84.61004 62.071236 39.038354
+
+gen best mean std
+3 84.61004 62.071236 39.038354
+
+gen best mean std
+4 84.61004 84.61004 0.0
+
+gen best mean std
+5 84.61004 84.61004 0.0

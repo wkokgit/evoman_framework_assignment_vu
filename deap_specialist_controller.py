@@ -21,7 +21,7 @@ from environment import Environment
 from demo_controller import player_controller
 
 
-experiment_name = "dummy_demo"
+experiment_name = "deap_specialist_run"
 if not os.path.exists(experiment_name):
     os.makedirs(experiment_name)
 
