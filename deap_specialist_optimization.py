@@ -41,8 +41,8 @@ def deap_specialist_optimization(experiment_name, enemyNumber):
     # GLOBAL VARIABLES
     POP_SIZE = 4  # Population size
     GENS = 5  # Amount of generations
-    CXPB = 0.5  # CXPB  is the probability with which two individuals are crossed
-    MUTPB = 0.2  # MUTPB is the probability for mutating an individual
+    # Not used CXPB = 0.5  # CXPB  is the probability with which two individuals are crossed
+    MUTPB = 0.1  # MUTPB is the probability for mutating an individual
     toolbox = base.Toolbox()
     n_vars = (env.get_num_sensors()+1)*n_hidden_neurons + (n_hidden_neurons+1)*5
 
@@ -107,25 +107,11 @@ def deap_specialist_optimization(experiment_name, enemyNumber):
         # registers mutation function: We use bit-flipping
         toolbox.register("mutate", tools.mutFlipBit, indpb=0.2)
 
-        # registers selection function: We select from a tournament of individuals.
-        #toolbox.register("select", tools.selBest)
+        # registers selection function: We select using tournament selection of 2.
         toolbox.register("select", tools.selTournament, tournsize=2)
 
-
-    def crossover(offspring):
-        """
-        'In evolutionary computing, the combination of features from two individuals
-        in offspring is often called crossover (or recombination).'
-        We currently use one point crossover.
-
-        Args:
-            offspring (List of individuals): Selected offspring from the population
-        """
-        for child1, child2 in zip(offspring[::2], offspring[1::2]):
-            if random.random() < CXPB:
-                toolbox.mate(child1, child2)
-                del child1.fitness.values
-                del child2.fitness.values
+        # registers survival selection function
+        toolbox.register("survive", tools.selBest)
 
 
     def mutation(offspring):
@@ -142,6 +128,32 @@ def deap_specialist_optimization(experiment_name, enemyNumber):
             if random.random() < MUTPB:
                 toolbox.mutate(mutant)
                 del mutant.fitness.values
+
+
+    def crossoverWithMutation(offspring):
+        """
+        'In evolutionary computing, the combination of features from two individuals
+        in offspring is often called crossover (or recombination).'
+        We currently use one point crossover.
+
+        Args:
+            offspring (List of individuals): Selected offspring from the population
+        """
+        children = []
+        for parent1, parent2 in zip(offspring[::2], offspring[1::2]):
+            # NOT USED. if random.random() < CXPB:
+            child1 = toolbox.clone(parent1)
+            child2 = toolbox.clone(parent2)
+            toolbox.mate(child1, child2)
+            del child1.fitness.values
+            del child2.fitness.values
+            children.extend((parent1,parent2))
+
+        # apply mutation to children
+        mutation(children)
+
+        # add children to population
+        offspring.extend((child for child in children))
 
 
     def configureResults(pop, generation):
@@ -173,8 +185,6 @@ def deap_specialist_optimization(experiment_name, enemyNumber):
         file_aux.write('\n'+str(generation)+' '+str(round(maxFitness,6))+' '+str(round(mean,6))+' '+str(round(std,6))   )
         file_aux.close()
 
-
-
         return fits
 
 
@@ -186,6 +196,7 @@ def deap_specialist_optimization(experiment_name, enemyNumber):
         3. Apply Crossover on the offspring
         4. Apply Mutation on the offspring
         5. Evaluate individuals that have been changed due to crossover or mutation
+        6. Apply survivor selection by picking the best of a group
         6. Show statistics of the fitness levels of the population and save best individual of that run
         7. Update environment solutions
 
@@ -205,30 +216,27 @@ def deap_specialist_optimization(experiment_name, enemyNumber):
             # 2.
             offspring = list(map(toolbox.clone, selected))
 
-            # It is IMPORTANT to know when crossover or mutation happens,
-            # the fitness value of that individual is deleted because
-            # the individual changed. Therefore we evaluate these individuals again.
-
-            #3.
-            crossover(offspring)
-
-            #4.
-            #mutation(offspring)
+            #3. #4.
+            crossoverWithMutation(offspring)
 
             #5.
             changed_individuals = [ind for ind in offspring if not ind.fitness.valid]
             toolbox.evaluate(changed_individuals)
 
-            # Replace old population by offspring
-            pop[:] = offspring
+            #6
+            survivors = toolbox.survive(offspring, POP_SIZE)
 
-            # 6.
+            # Replace old population by offspring
+            pop[:] = survivors
+
+            # 7.
             fits = configureResults(pop, currentG)
             print(fits)
-            # 7.
+            # 8.
             solutions = [pop, fits]
             env.update_solutions(solutions)
             env.save_state()
+            exit()
 
 
     def main():
