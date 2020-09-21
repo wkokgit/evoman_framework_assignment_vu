@@ -1,0 +1,111 @@
+
+
+MESSAGE: Pygame initialized for simulation.
+
+RUN: run status: enemy: 2; fitness: 21.758252984940356; player life: 0; enemy life: 70.0; time: 189
+
+RUN: run status: enemy: 2; fitness: -5.886104031450156; player life: 0; enemy life: 100; time: 360
+
+RUN: run status: enemy: 2; fitness: -5.886104031450156; player life: 0; enemy life: 100; time: 360
+
+RUN: run status: enemy: 2; fitness: -5.7899601708972535; player life: 0; enemy life: 100; time: 327
+
+RUN: run status: enemy: 2; fitness: 85.72700044143625; player life: 10; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: -5.7899601708972535; player life: 0; enemy life: 100; time: 327
+
+RUN: run status: enemy: 2; fitness: -5.793013608384144; player life: 0; enemy life: 100; time: 328
+
+RUN: run status: enemy: 2; fitness: -5.7899601708972535; player life: 0; enemy life: 100; time: 327
+
+MESSAGE: state has been saved to files.
+
+RUN: run status: enemy: 2; fitness: 21.758252984940356; player life: 0; enemy life: 70.0; time: 189
+
+RUN: run status: enemy: 2; fitness: 21.758252984940356; player life: 0; enemy life: 70.0; time: 189
+
+RUN: run status: enemy: 2; fitness: 85.62385026742616; player life: 8; enemy life: 0; time: 177
+
+RUN: run status: enemy: 2; fitness: 85.72700044143625; player life: 10; enemy life: 0; time: 195
+
+MESSAGE: state has been saved to files.
+
+RUN: run status: enemy: 2; fitness: 85.72700044143625; player life: 10; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 85.72700044143625; player life: 10; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 85.72700044143625; player life: 10; enemy life: 0; time: 195
+
+MESSAGE: state has been saved to files.
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 85.72700044143625; player life: 10; enemy life: 0; time: 195
+
+MESSAGE: state has been saved to files.
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 88.61261419415925; player life: 38; enemy life: 0; time: 179
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+MESSAGE: state has been saved to files.
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 88.38936470590374; player life: 34; enemy life: 0; time: 150
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+MESSAGE: state has been saved to files.
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 88.61261419415925; player life: 38; enemy life: 0; time: 179
+
+RUN: run status: enemy: 2; fitness: 3.2131026186332923; player life: 0; enemy life: 90.0; time: 326
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+MESSAGE: state has been saved to files.
+
+RUN: run status: enemy: 2; fitness: 88.61261419415925; player life: 38; enemy life: 0; time: 179
+
+RUN: run status: enemy: 2; fitness: 88.61261419415925; player life: 38; enemy life: 0; time: 179
+
+RUN: run status: enemy: 2; fitness: 88.61261419415925; player life: 38; enemy life: 0; time: 179
+
+RUN: run status: enemy: 2; fitness: 88.61261419415925; player life: 38; enemy life: 0; time: 179
+
+MESSAGE: state has been saved to files.
+
+RUN: run status: enemy: 2; fitness: 88.61261419415925; player life: 38; enemy life: 0; time: 179
+
+RUN: run status: enemy: 2; fitness: 88.61261419415925; player life: 38; enemy life: 0; time: 179
+
+RUN: run status: enemy: 2; fitness: 88.61261419415925; player life: 38; enemy life: 0; time: 179
+
+RUN: run status: enemy: 2; fitness: 88.61261419415925; player life: 38; enemy life: 0; time: 179
+
+MESSAGE: state has been saved to files.
+
+RUN: run status: enemy: 2; fitness: 88.61261419415925; player life: 38; enemy life: 0; time: 179
+
+RUN: run status: enemy: 2; fitness: 88.61261419415925; player life: 38; enemy life: 0; time: 179
+
+RUN: run status: enemy: 2; fitness: 88.61261419415925; player life: 38; enemy life: 0; time: 179
+
+RUN: run status: enemy: 2; fitness: 88.61261419415925; player life: 38; enemy life: 0; time: 179
+
+MESSAGE: state has been saved to files.

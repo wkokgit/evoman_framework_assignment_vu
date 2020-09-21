@@ -18,7 +18,7 @@ import csv
 import os
 
 
-def deap_specialist_optimization(experiment_name, enemyNumber):
+def deap_specialist_cxOnePoint(experiment_name, enemyNumber):
     if not os.path.exists(experiment_name):
         os.makedirs(experiment_name)
 
@@ -39,7 +39,7 @@ def deap_specialist_optimization(experiment_name, enemyNumber):
     )
 
     # GLOBAL VARIABLES
-    POP_SIZE = 8  # Population size
+    POP_SIZE = 4  # Population size
     GENS = 10  # Amount of generations
     # Not used CXPB = 0.5  # CXPB  is the probability with which two individuals are crossed
     MUTPB = 0.1  # MUTPB is the probability for mutating an individual
@@ -111,7 +111,7 @@ def deap_specialist_optimization(experiment_name, enemyNumber):
         toolbox.register("select", tools.selTournament, tournsize=2)
 
         # registers survival selection function
-        toolbox.register("survive", tools.selBest)
+        toolbox.register("survive", tools.selRandom)
 
 
     def mutation(offspring):
@@ -211,10 +211,10 @@ def deap_specialist_optimization(experiment_name, enemyNumber):
             print("-- Generation %i --" % currentG)
 
             # 1.
-            #selected = toolbox.select(pop, len(pop))
+            selected = toolbox.select(pop, len(pop))
 
             # 2.
-            offspring = list(map(toolbox.clone, pop))
+            offspring = list(map(toolbox.clone, selected))
 
             #3. #4.
             crossoverWithMutation(offspring)
@@ -235,8 +235,6 @@ def deap_specialist_optimization(experiment_name, enemyNumber):
             solutions = [pop, fits]
             env.update_solutions(solutions)
             env.save_state()
-
-            if currentG == 2: exit()
 
 
     def main():
@@ -278,16 +276,15 @@ def deap_specialist_optimization(experiment_name, enemyNumber):
     main()
 
 
-# --------- STARTS PROGRAM FOR EVERY ENEMY 10 TIMES ---------------
-for x in range(1,4):
-    print("------------------------------- ENEMY " + str(x) + " -------------------------------------------------------")
-    enemyNumber = x
-    experiment_name = "deap_specialist_cxOnePoint/Enemy" + str(enemyNumber)
+def startUpOnePoint():
+    print("------------------------------- START ONEPOINT -------------------------------------------------------")
+    # --------- STARTS PROGRAM FOR EVERY ENEMY 10 TIMES ---------------
+    for x in range(1,4):
+        print("-----------ONEPOINT------------ ENEMY " + str(x) + " -------------------------------------------------------")
+        enemyNumber = x
+        experiment_name = "deap_specialist_cxOnePoint/Enemy" + str(enemyNumber)
 
-    for i in range(1,11):
-        print("------------------------------- RUN " + str(i) + " ------------------------------------------------------")
-        experiment_name_temp = experiment_name + "/" + str(i)
-        deap_specialist_optimization(experiment_name_temp, enemyNumber)
-
-
-exit()
+        for i in range(1,11):
+            print("----------ONEPOINT------------ RUN " + str(i) + " ----------- ENEMY " + str(x) + "--------------------------")
+            experiment_name_temp = experiment_name + "/" + str(i)
+            deap_specialist_cxOnePoint(experiment_name_temp, enemyNumber)
