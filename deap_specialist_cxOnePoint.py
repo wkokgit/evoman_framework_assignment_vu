@@ -39,8 +39,8 @@ def deap_specialist_optimization(experiment_name, enemyNumber):
     )
 
     # GLOBAL VARIABLES
-    POP_SIZE = 4  # Population size
-    GENS = 5  # Amount of generations
+    POP_SIZE = 8  # Population size
+    GENS = 10  # Amount of generations
     # Not used CXPB = 0.5  # CXPB  is the probability with which two individuals are crossed
     MUTPB = 0.1  # MUTPB is the probability for mutating an individual
     toolbox = base.Toolbox()
@@ -86,7 +86,7 @@ def deap_specialist_optimization(experiment_name, enemyNumber):
 
         # an individual is a np.ndarray filled with random floats which are the inputs of the game
         creator.create("Individual", np.ndarray, fitness=creator.FitnessMax)
-        random.seed(58) #starts with the same population
+
         toolbox.register("attr_float", random.uniform, -1, 1)
 
         # registers function to create an individual
@@ -127,7 +127,7 @@ def deap_specialist_optimization(experiment_name, enemyNumber):
         for mutant in offspring:
             if random.random() < MUTPB:
                 toolbox.mutate(mutant)
-                del mutant.fitness.values
+                #del mutant.fitness.values
 
 
     def crossoverWithMutation(offspring):
@@ -147,7 +147,7 @@ def deap_specialist_optimization(experiment_name, enemyNumber):
             toolbox.mate(child1, child2)
             del child1.fitness.values
             del child2.fitness.values
-            children.extend((parent1,parent2))
+            children.extend((child1,child2))
 
         # apply mutation to children
         mutation(children)
@@ -180,10 +180,10 @@ def deap_specialist_optimization(experiment_name, enemyNumber):
         stdlist.append(round(std,6))
 
         # save result of each generation
-        file_aux  = open(experiment_name+'/results.txt','a')
-        file_aux.write('\n\ngen best mean std')
-        file_aux.write('\n'+str(generation)+' '+str(round(maxFitness,6))+' '+str(round(mean,6))+' '+str(round(std,6))   )
-        file_aux.close()
+        # file_aux  = open(experiment_name+'/results.txt','a')
+        # file_aux.write('\n\ngen best mean std')
+        # file_aux.write('\n'+str(generation)+' '+str(round(maxFitness,6))+' '+str(round(mean,6))+' '+str(round(std,6))   )
+        # file_aux.close()
 
         return fits
 
@@ -211,10 +211,10 @@ def deap_specialist_optimization(experiment_name, enemyNumber):
             print("-- Generation %i --" % currentG)
 
             # 1.
-            selected = toolbox.select(pop, len(pop))
+            #selected = toolbox.select(pop, len(pop))
 
             # 2.
-            offspring = list(map(toolbox.clone, selected))
+            offspring = list(map(toolbox.clone, pop))
 
             #3. #4.
             crossoverWithMutation(offspring)
@@ -222,7 +222,6 @@ def deap_specialist_optimization(experiment_name, enemyNumber):
             #5.
             changed_individuals = [ind for ind in offspring if not ind.fitness.valid]
             toolbox.evaluate(changed_individuals)
-
             #6
             survivors = toolbox.survive(offspring, POP_SIZE)
 
@@ -236,7 +235,8 @@ def deap_specialist_optimization(experiment_name, enemyNumber):
             solutions = [pop, fits]
             env.update_solutions(solutions)
             env.save_state()
-            exit()
+
+            if currentG == 2: exit()
 
 
     def main():
@@ -255,8 +255,9 @@ def deap_specialist_optimization(experiment_name, enemyNumber):
 
         # 2.
         print("-- Form Population --")
+        random.seed(2) #starts with the same population
         pop = toolbox.population(n=POP_SIZE)
-
+        random.seed()
         # 3.
         toolbox.evaluate(pop)
 
@@ -277,12 +278,13 @@ def deap_specialist_optimization(experiment_name, enemyNumber):
     main()
 
 
+# --------- STARTS PROGRAM FOR EVERY ENEMY 10 TIMES ---------------
 for x in range(1,4):
     print("------------------------------- ENEMY " + str(x) + " -------------------------------------------------------")
     enemyNumber = x
     experiment_name = "deap_specialist_cxOnePoint/Enemy" + str(enemyNumber)
 
-    for i in range(1,3): #change 3 to 11 when doing the final test
+    for i in range(1,11):
         print("------------------------------- RUN " + str(i) + " ------------------------------------------------------")
         experiment_name_temp = experiment_name + "/" + str(i)
         deap_specialist_optimization(experiment_name_temp, enemyNumber)
