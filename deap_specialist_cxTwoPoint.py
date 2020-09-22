@@ -236,9 +236,7 @@ def deap_specialist_cxTwoPoint(experiment_name, enemyNumber, iterationnumber):
             env.update_solutions(solutions)
             env.save_state()
 
-
-
-    def main():
+    def main(iterationnumber):
         """
         This is the start of the program.
         Program  Steps:
@@ -254,9 +252,10 @@ def deap_specialist_cxTwoPoint(experiment_name, enemyNumber, iterationnumber):
 
         # 2.
         print("-- Form Population --")
-        random.seed(2) #starts with the same population
+        random.seed(2)  # starts with the same population
         pop = toolbox.population(n=POP_SIZE)
         random.seed(iterationnumber)
+        print(iterationnumber)
         # 3.
         toolbox.evaluate(pop)
 
@@ -290,5 +289,5 @@ def startUpTwoPoint():
             iterationnumber = iterationnumber + 1
             print("-----------TWOPOINT------------ RUN " + str(i) + " ---------------ENEMY " + str(x) + "-----------------------------")
             experiment_name_temp = experiment_name + "/" + str(i)
-            deap_specialist_cxTwoPoint(experiment_name_temp, enemyNumber)
+            deap_specialist_cxTwoPoint(experiment_name_temp, enemyNumber,iterationnumber)
 
