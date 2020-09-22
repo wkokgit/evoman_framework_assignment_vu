@@ -18,7 +18,7 @@ import csv
 import os
 
 
-def deap_specialist_cxOnePoint(experiment_name, enemyNumber):
+def deap_specialist_cxOnePoint(experiment_name, enemyNumber,iterationnumber):
     if not os.path.exists(experiment_name):
         os.makedirs(experiment_name)
 
@@ -39,7 +39,7 @@ def deap_specialist_cxOnePoint(experiment_name, enemyNumber):
     )
 
     # GLOBAL VARIABLES
-    POP_SIZE = 50  # Population size
+    POP_SIZE = 4  # Population size
     GENS = 10  # Amount of generations
     # Not used CXPB = 0.5  # CXPB  is the probability with which two individuals are crossed
     MUTPB = 0.1  # MUTPB is the probability for mutating an individual
@@ -237,7 +237,7 @@ def deap_specialist_cxOnePoint(experiment_name, enemyNumber):
             env.save_state()
 
 
-    def main():
+    def main(iterationnumber):
         """
         This is the start of the program.
         Program  Steps:
@@ -255,7 +255,8 @@ def deap_specialist_cxOnePoint(experiment_name, enemyNumber):
         print("-- Form Population --")
         random.seed(2) #starts with the same population
         pop = toolbox.population(n=POP_SIZE)
-        random.seed()
+        random.seed(iterationnumber)
+        print(iterationnumber)
         # 3.
         toolbox.evaluate(pop)
 
@@ -273,18 +274,20 @@ def deap_specialist_cxOnePoint(experiment_name, enemyNumber):
             for i in range(len(bestlist)):
                 filewriter.writerow([genlist[i], bestlist[i], meanlist[i], stdlist[i]])
 
-    main()
+    main(iterationnumber)
 
 
 def startUpOnePoint():
     print("------------------------------- START ONEPOINT -------------------------------------------------------")
     # --------- STARTS PROGRAM FOR EVERY ENEMY 10 TIMES ---------------
+    iterationnumber = 0
     for x in range(1,4):
         print("-----------ONEPOINT------------ ENEMY " + str(x) + " -------------------------------------------------------")
         enemyNumber = x
         experiment_name = "deap_specialist_cxOnePoint/Enemy" + str(enemyNumber)
 
         for i in range(1,11):
+            iterationnumber = iterationnumber + 1
             print("----------ONEPOINT------------ RUN " + str(i) + " ----------- ENEMY " + str(x) + "--------------------------")
             experiment_name_temp = experiment_name + "/" + str(i)
-            deap_specialist_cxOnePoint(experiment_name_temp, enemyNumber)
+            deap_specialist_cxOnePoint(experiment_name_temp, enemyNumber,iterationnumber)

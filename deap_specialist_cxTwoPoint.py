@@ -18,7 +18,7 @@ import csv
 import os
 
 
-def deap_specialist_cxTwoPoint(experiment_name, enemyNumber):
+def deap_specialist_cxTwoPoint(experiment_name, enemyNumber, iterationnumber):
     if not os.path.exists(experiment_name):
         os.makedirs(experiment_name)
 
@@ -256,7 +256,7 @@ def deap_specialist_cxTwoPoint(experiment_name, enemyNumber):
         print("-- Form Population --")
         random.seed(2) #starts with the same population
         pop = toolbox.population(n=POP_SIZE)
-        random.seed()
+        random.seed(iterationnumber)
         # 3.
         toolbox.evaluate(pop)
 
@@ -274,18 +274,20 @@ def deap_specialist_cxTwoPoint(experiment_name, enemyNumber):
             for i in range(len(bestlist)):
                 filewriter.writerow([genlist[i], bestlist[i], meanlist[i], stdlist[i]])
 
-    main()
+    main(iterationnumber)
 
 
 def startUpTwoPoint():
     print("------------------------------- START TWOPOINT -------------------------------------------------------")
     # --------- STARTS PROGRAM FOR EVERY ENEMY 10 TIMES ---------------
+    iterationnumber = 0
     for x in range(1,4):
         print("-------------TWOPOINT---------- ENEMY " + str(x) + " -------------------------------------------------------")
         enemyNumber = x
         experiment_name = "deap_specialist_cxTwoPoint/Enemy" + str(enemyNumber)
 
         for i in range(1,11):
+            iterationnumber = iterationnumber + 1
             print("-----------TWOPOINT------------ RUN " + str(i) + " ---------------ENEMY " + str(x) + "-----------------------------")
             experiment_name_temp = experiment_name + "/" + str(i)
             deap_specialist_cxTwoPoint(experiment_name_temp, enemyNumber)
