@@ -10,102 +10,1114 @@ RUN: run status: enemy: 2; fitness: -5.886104031450156; player life: 0; enemy li
 
 RUN: run status: enemy: 2; fitness: -5.7899601708972535; player life: 0; enemy life: 100; time: 327
 
-RUN: run status: enemy: 2; fitness: -5.886104031450156; player life: 0; enemy life: 100; time: 360
+RUN: run status: enemy: 2; fitness: 30.20394224923463; player life: 0; enemy life: 60.0; time: 329
 
-RUN: run status: enemy: 2; fitness: 21.758252984940356; player life: 0; enemy life: 70.0; time: 189
-
-RUN: run status: enemy: 2; fitness: 21.758252984940356; player life: 0; enemy life: 70.0; time: 189
-
-RUN: run status: enemy: 2; fitness: 21.758252984940356; player life: 0; enemy life: 70.0; time: 189
-
-MESSAGE: state has been saved to files.
-
-RUN: run status: enemy: 2; fitness: 21.758252984940356; player life: 0; enemy life: 70.0; time: 189
-
-RUN: run status: enemy: 2; fitness: 21.758252984940356; player life: 0; enemy life: 70.0; time: 189
-
-RUN: run status: enemy: 2; fitness: 57.25379680945985; player life: 0; enemy life: 30.0; time: 313
-
-RUN: run status: enemy: 2; fitness: -5.886104031450156; player life: 0; enemy life: 100; time: 360
-
-MESSAGE: state has been saved to files.
+RUN: run status: enemy: 2; fitness: -5.53338948872752; player life: 0; enemy life: 100; time: 253
 
 RUN: run status: enemy: 2; fitness: -5.7745515455444085; player life: 0; enemy life: 100; time: 322
 
-RUN: run status: enemy: 2; fitness: -5.886104031450156; player life: 0; enemy life: 100; time: 360
+RUN: run status: enemy: 2; fitness: 91.84704041507838; player life: 74; enemy life: 0; time: 258
 
-RUN: run status: enemy: 2; fitness: 57.25379680945985; player life: 0; enemy life: 30.0; time: 313
+RUN: run status: enemy: 2; fitness: -5.796057750765372; player life: 0; enemy life: 100; time: 329
 
-RUN: run status: enemy: 2; fitness: -5.886104031450156; player life: 0; enemy life: 100; time: 360
-
-MESSAGE: state has been saved to files.
-
-RUN: run status: enemy: 2; fitness: -5.7745515455444085; player life: 0; enemy life: 100; time: 322
-
-RUN: run status: enemy: 2; fitness: -5.7745515455444085; player life: 0; enemy life: 100; time: 322
+RUN: run status: enemy: 2; fitness: -5.796057750765372; player life: 0; enemy life: 100; time: 329
 
 RUN: run status: enemy: 2; fitness: -5.886104031450156; player life: 0; enemy life: 100; time: 360
 
-RUN: run status: enemy: 2; fitness: -5.886104031450156; player life: 0; enemy life: 100; time: 360
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
 
-MESSAGE: state has been saved to files.
+RUN: run status: enemy: 2; fitness: 20.361432210833478; player life: 0; enemy life: 70.0; time: 764
+
+RUN: run status: enemy: 2; fitness: -5.099866427824199; player life: 0; enemy life: 100; time: 164
 
 RUN: run status: enemy: 2; fitness: -5.886104031450156; player life: 0; enemy life: 100; time: 360
 
 RUN: run status: enemy: 2; fitness: -5.7745515455444085; player life: 0; enemy life: 100; time: 322
+
+RUN: run status: enemy: 2; fitness: 21.266658723102253; player life: 0; enemy life: 70.0; time: 309
 
 RUN: run status: enemy: 2; fitness: -5.783825182329737; player life: 0; enemy life: 100; time: 325
 
-RUN: run status: enemy: 2; fitness: -5.886104031450156; player life: 0; enemy life: 100; time: 360
+RUN: run status: enemy: 2; fitness: 21.58835394814496; player life: 0; enemy life: 70.0; time: 224
 
-MESSAGE: state has been saved to files.
+RUN: run status: enemy: 2; fitness: -5.6240175061873385; player life: 0; enemy life: 100; time: 277
 
-RUN: run status: enemy: 2; fitness: -5.7745515455444085; player life: 0; enemy life: 100; time: 322
+RUN: run status: enemy: 2; fitness: 12.225448454455591; player life: 0; enemy life: 80.0; time: 322
 
-RUN: run status: enemy: 2; fitness: -5.7745515455444085; player life: 0; enemy life: 100; time: 322
+RUN: run status: enemy: 2; fitness: -5.783825182329737; player life: 0; enemy life: 100; time: 325
 
-RUN: run status: enemy: 2; fitness: -5.886104031450156; player life: 0; enemy life: 100; time: 360
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
 
-RUN: run status: enemy: 2; fitness: -5.7745515455444085; player life: 0; enemy life: 100; time: 322
+RUN: run status: enemy: 2; fitness: 30.409013019489144; player life: 0; enemy life: 60.0; time: 268
 
-MESSAGE: state has been saved to files.
+RUN: run status: enemy: 2; fitness: -5.783825182329737; player life: 0; enemy life: 100; time: 325
 
-RUN: run status: enemy: 2; fitness: -5.7745515455444085; player life: 0; enemy life: 100; time: 322
-
-RUN: run status: enemy: 2; fitness: -5.7745515455444085; player life: 0; enemy life: 100; time: 322
-
-RUN: run status: enemy: 2; fitness: -5.7745515455444085; player life: 0; enemy life: 100; time: 322
-
-RUN: run status: enemy: 2; fitness: -5.7745515455444085; player life: 0; enemy life: 100; time: 322
-
-MESSAGE: state has been saved to files.
-
-RUN: run status: enemy: 2; fitness: -5.7745515455444085; player life: 0; enemy life: 100; time: 322
+RUN: run status: enemy: 2; fitness: -5.796057750765372; player life: 0; enemy life: 100; time: 329
 
 RUN: run status: enemy: 2; fitness: -5.886104031450156; player life: 0; enemy life: 100; time: 360
 
-RUN: run status: enemy: 2; fitness: -5.7745515455444085; player life: 0; enemy life: 100; time: 322
+RUN: run status: enemy: 2; fitness: -5.886104031450156; player life: 0; enemy life: 100; time: 360
 
-RUN: run status: enemy: 2; fitness: -5.7745515455444085; player life: 0; enemy life: 100; time: 322
+RUN: run status: enemy: 2; fitness: -5.796057750765372; player life: 0; enemy life: 100; time: 329
+
+RUN: run status: enemy: 2; fitness: -5.796057750765372; player life: 0; enemy life: 100; time: 329
+
+RUN: run status: enemy: 2; fitness: 91.76878821817864; player life: 74; enemy life: 0; time: 279
+
+RUN: run status: enemy: 2; fitness: -5.796057750765372; player life: 0; enemy life: 100; time: 329
+
+RUN: run status: enemy: 2; fitness: 3.0919170618310687; player life: 0; enemy life: 90.0; time: 368
+
+RUN: run status: enemy: 2; fitness: -5.796057750765372; player life: 0; enemy life: 100; time: 329
+
+RUN: run status: enemy: 2; fitness: -5.796057750765372; player life: 0; enemy life: 100; time: 329
+
+RUN: run status: enemy: 2; fitness: -5.924255797414532; player life: 0; enemy life: 100; time: 374
+
+RUN: run status: enemy: 2; fitness: -6.654152520183219; player life: 0; enemy life: 100; time: 776
+
+RUN: run status: enemy: 2; fitness: -5.786897381366708; player life: 0; enemy life: 100; time: 326
+
+RUN: run status: enemy: 2; fitness: -5.940171252720432; player life: 0; enemy life: 100; time: 380
+
+RUN: run status: enemy: 2; fitness: -5.480638923341991; player life: 0; enemy life: 100; time: 240
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: -5.796057750765372; player life: 0; enemy life: 100; time: 329
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: -5.733341276897746; player life: 0; enemy life: 100; time: 309
+
+RUN: run status: enemy: 2; fitness: -5.53338948872752; player life: 0; enemy life: 100; time: 253
+
+RUN: run status: enemy: 2; fitness: -5.796057750765372; player life: 0; enemy life: 100; time: 329
+
+RUN: run status: enemy: 2; fitness: -5.783825182329737; player life: 0; enemy life: 100; time: 325
+
+RUN: run status: enemy: 2; fitness: 66.4825471035353; player life: 0; enemy life: 20.0; time: 249
+
+RUN: run status: enemy: 2; fitness: -5.796057750765372; player life: 0; enemy life: 100; time: 329
+
+RUN: run status: enemy: 2; fitness: -5.541263545158426; player life: 0; enemy life: 100; time: 255
+
+RUN: run status: enemy: 2; fitness: -6.003887067106539; player life: 0; enemy life: 100; time: 405
+
+RUN: run status: enemy: 2; fitness: -5.480638923341991; player life: 0; enemy life: 100; time: 240
+
+RUN: run status: enemy: 2; fitness: 3.0919170618310687; player life: 0; enemy life: 90.0; time: 368
+
+RUN: run status: enemy: 2; fitness: 3.0919170618310687; player life: 0; enemy life: 90.0; time: 368
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 30.409013019489144; player life: 0; enemy life: 60.0; time: 268
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 12.216174817670263; player life: 0; enemy life: 80.0; time: 325
+
+RUN: run status: enemy: 2; fitness: -5.796057750765372; player life: 0; enemy life: 100; time: 329
+
+RUN: run status: enemy: 2; fitness: -5.541263545158426; player life: 0; enemy life: 100; time: 255
+
+RUN: run status: enemy: 2; fitness: 30.409013019489144; player life: 0; enemy life: 60.0; time: 268
+
+RUN: run status: enemy: 2; fitness: -5.541263545158426; player life: 0; enemy life: 100; time: 255
+
+RUN: run status: enemy: 2; fitness: -5.53338948872752; player life: 0; enemy life: 100; time: 253
+
+RUN: run status: enemy: 2; fitness: -5.6240175061873385; player life: 0; enemy life: 100; time: 277
+
+RUN: run status: enemy: 2; fitness: 12.648141866523932; player life: 0; enemy life: 80.0; time: 211
+
+RUN: run status: enemy: 2; fitness: 21.58835394814496; player life: 0; enemy life: 70.0; time: 224
+
+RUN: run status: enemy: 2; fitness: -5.631211781821365; player life: 0; enemy life: 100; time: 279
+
+RUN: run status: enemy: 2; fitness: 30.747726571953372; player life: 0; enemy life: 60.0; time: 191
+
+RUN: run status: enemy: 2; fitness: 30.20394224923463; player life: 0; enemy life: 60.0; time: 329
+
+RUN: run status: enemy: 2; fitness: 30.20394224923463; player life: 0; enemy life: 60.0; time: 329
+
+RUN: run status: enemy: 2; fitness: 48.344008189180144; player life: 0; enemy life: 40.0; time: 286
+
+RUN: run status: enemy: 2; fitness: 21.266658723102253; player life: 0; enemy life: 70.0; time: 309
+
+RUN: run status: enemy: 2; fitness: 48.30964054567594; player life: 0; enemy life: 40.0; time: 296
+
+RUN: run status: enemy: 2; fitness: 21.266658723102253; player life: 0; enemy life: 70.0; time: 309
+
+RUN: run status: enemy: 2; fitness: -5.796057750765372; player life: 0; enemy life: 100; time: 329
+
+RUN: run status: enemy: 2; fitness: -5.796057750765372; player life: 0; enemy life: 100; time: 329
+
+RUN: run status: enemy: 2; fitness: -6.306275286948016; player life: 0; enemy life: 100; time: 548
+
+RUN: run status: enemy: 2; fitness: -5.886104031450156; player life: 0; enemy life: 100; time: 360
+
+RUN: run status: enemy: 2; fitness: 39.22544845445559; player life: 0; enemy life: 50.0; time: 322
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 39.45482255552044; player life: 0; enemy life: 50.0; time: 256
+
+RUN: run status: enemy: 2; fitness: 21.758252984940356; player life: 0; enemy life: 70.0; time: 189
+
+RUN: run status: enemy: 2; fitness: -5.783825182329737; player life: 0; enemy life: 100; time: 325
+
+RUN: run status: enemy: 2; fitness: -5.541263545158426; player life: 0; enemy life: 100; time: 255
+
+RUN: run status: enemy: 2; fitness: 57.511062273843315; player life: 0; enemy life: 30.0; time: 242
+
+RUN: run status: enemy: 2; fitness: 21.758252984940356; player life: 0; enemy life: 70.0; time: 189
+
+RUN: run status: enemy: 2; fitness: -5.099866427824199; player life: 0; enemy life: 100; time: 164
+
+RUN: run status: enemy: 2; fitness: -5.099866427824199; player life: 0; enemy life: 100; time: 164
+
+RUN: run status: enemy: 2; fitness: 87.93740496697303; player life: 30; enemy life: 0; time: 158
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: -5.308267697401205; player life: 0; enemy life: 100; time: 202
+
+RUN: run status: enemy: 2; fitness: -5.796057750765372; player life: 0; enemy life: 100; time: 329
+
+RUN: run status: enemy: 2; fitness: -5.54907608489522; player life: 0; enemy life: 100; time: 257
+
+RUN: run status: enemy: 2; fitness: -5.545177444479562; player life: 0; enemy life: 100; time: 256
+
+RUN: run status: enemy: 2; fitness: 86.29061166337202; player life: 18; enemy life: 0; time: 247
+
+RUN: run status: enemy: 2; fitness: -5.53338948872752; player life: 0; enemy life: 100; time: 253
 
 MESSAGE: state has been saved to files.
 
-RUN: run status: enemy: 2; fitness: -5.7745515455444085; player life: 0; enemy life: 100; time: 322
+RUN: run status: enemy: 2; fitness: -5.796057750765372; player life: 0; enemy life: 100; time: 329
+
+RUN: run status: enemy: 2; fitness: 3.0919170618310687; player life: 0; enemy life: 90.0; time: 368
+
+RUN: run status: enemy: 2; fitness: -5.796057750765372; player life: 0; enemy life: 100; time: 329
+
+RUN: run status: enemy: 2; fitness: -5.796057750765372; player life: 0; enemy life: 100; time: 329
+
+RUN: run status: enemy: 2; fitness: -5.796057750765372; player life: 0; enemy life: 100; time: 329
+
+RUN: run status: enemy: 2; fitness: 12.127882210524584; player life: 0; enemy life: 80.0; time: 355
+
+RUN: run status: enemy: 2; fitness: 30.20394224923463; player life: 0; enemy life: 60.0; time: 329
+
+RUN: run status: enemy: 2; fitness: 3.0919170618310687; player life: 0; enemy life: 90.0; time: 368
+
+RUN: run status: enemy: 2; fitness: 91.32700044143624; player life: 66; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: -5.480638923341991; player life: 0; enemy life: 100; time: 240
+
+RUN: run status: enemy: 2; fitness: -5.53338948872752; player life: 0; enemy life: 100; time: 253
+
+RUN: run status: enemy: 2; fitness: 88.63402398497814; player life: 40; enemy life: 0; time: 214
+
+RUN: run status: enemy: 2; fitness: 30.127882210524582; player life: 0; enemy life: 60.0; time: 355
+
+RUN: run status: enemy: 2; fitness: -5.749392985908253; player life: 0; enemy life: 100; time: 314
+
+RUN: run status: enemy: 2; fitness: -5.6240175061873385; player life: 0; enemy life: 100; time: 277
 
 RUN: run status: enemy: 2; fitness: -5.7745515455444085; player life: 0; enemy life: 100; time: 322
 
-RUN: run status: enemy: 2; fitness: -5.7745515455444085; player life: 0; enemy life: 100; time: 322
+RUN: run status: enemy: 2; fitness: -5.796057750765372; player life: 0; enemy life: 100; time: 329
 
-RUN: run status: enemy: 2; fitness: -5.7745515455444085; player life: 0; enemy life: 100; time: 322
+RUN: run status: enemy: 2; fitness: 39.74772657195337; player life: 0; enemy life: 50.0; time: 191
+
+RUN: run status: enemy: 2; fitness: 21.758252984940356; player life: 0; enemy life: 70.0; time: 189
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 30.409013019489144; player life: 0; enemy life: 60.0; time: 268
+
+RUN: run status: enemy: 2; fitness: 11.405586540250223; player life: 0; enemy life: 80.0; time: 731
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 21.65289246928253; player life: 0; enemy life: 70.0; time: 210
+
+RUN: run status: enemy: 2; fitness: -5.541263545158426; player life: 0; enemy life: 100; time: 255
+
+RUN: run status: enemy: 2; fitness: -5.783825182329737; player life: 0; enemy life: 100; time: 325
+
+RUN: run status: enemy: 2; fitness: -5.786897381366708; player life: 0; enemy life: 100; time: 326
+
+RUN: run status: enemy: 2; fitness: 66.41275134159974; player life: 0; enemy life: 20.0; time: 267
+
+RUN: run status: enemy: 2; fitness: 21.58835394814496; player life: 0; enemy life: 70.0; time: 224
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 21.58835394814496; player life: 0; enemy life: 70.0; time: 224
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: -5.517452896464707; player life: 0; enemy life: 100; time: 249
+
+RUN: run status: enemy: 2; fitness: -5.099866427824199; player life: 0; enemy life: 100; time: 164
+
+RUN: run status: enemy: 2; fitness: 12.225448454455591; player life: 0; enemy life: 80.0; time: 322
+
+RUN: run status: enemy: 2; fitness: 3.0919170618310687; player life: 0; enemy life: 90.0; time: 368
+
+RUN: run status: enemy: 2; fitness: 21.09191706183107; player life: 0; enemy life: 70.0; time: 368
+
+RUN: run status: enemy: 2; fitness: 3.0919170618310687; player life: 0; enemy life: 90.0; time: 368
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 21.216174817670264; player life: 0; enemy life: 70.0; time: 325
 
 MESSAGE: state has been saved to files.
 
-RUN: run status: enemy: 2; fitness: -5.7745515455444085; player life: 0; enemy life: 100; time: 322
+RUN: run status: enemy: 2; fitness: -4.990432586778736; player life: 0; enemy life: 100; time: 147
+
+RUN: run status: enemy: 2; fitness: 21.58835394814496; player life: 0; enemy life: 70.0; time: 224
+
+RUN: run status: enemy: 2; fitness: 92.13703951986405; player life: 78; enemy life: 0; time: 288
+
+RUN: run status: enemy: 2; fitness: 21.58835394814496; player life: 0; enemy life: 70.0; time: 224
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 21.58835394814496; player life: 0; enemy life: 70.0; time: 224
+
+RUN: run status: enemy: 2; fitness: 92.12700044143625; player life: 74; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 21.58835394814496; player life: 0; enemy life: 70.0; time: 224
+
+RUN: run status: enemy: 2; fitness: -5.908082938168931; player life: 0; enemy life: 100; time: 368
+
+RUN: run status: enemy: 2; fitness: -5.541263545158426; player life: 0; enemy life: 100; time: 255
+
+RUN: run status: enemy: 2; fitness: 57.68188000615579; player life: 0; enemy life: 30.0; time: 204
+
+RUN: run status: enemy: 2; fitness: 21.266658723102253; player life: 0; enemy life: 70.0; time: 309
+
+RUN: run status: enemy: 2; fitness: -5.739792912179234; player life: 0; enemy life: 100; time: 311
+
+RUN: run status: enemy: 2; fitness: 21.65289246928253; player life: 0; enemy life: 70.0; time: 210
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 30.20394224923463; player life: 0; enemy life: 60.0; time: 329
+
+RUN: run status: enemy: 2; fitness: 30.20394224923463; player life: 0; enemy life: 60.0; time: 329
+
+RUN: run status: enemy: 2; fitness: 21.58835394814496; player life: 0; enemy life: 70.0; time: 224
+
+RUN: run status: enemy: 2; fitness: 21.58835394814496; player life: 0; enemy life: 70.0; time: 224
+
+RUN: run status: enemy: 2; fitness: 21.58835394814496; player life: 0; enemy life: 70.0; time: 224
+
+RUN: run status: enemy: 2; fitness: 21.58835394814496; player life: 0; enemy life: 70.0; time: 224
+
+RUN: run status: enemy: 2; fitness: -4.976733742420574; player life: 0; enemy life: 100; time: 145
+
+RUN: run status: enemy: 2; fitness: 30.409013019489144; player life: 0; enemy life: 60.0; time: 268
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: -4.962844630259907; player life: 0; enemy life: 100; time: 143
+
+RUN: run status: enemy: 2; fitness: -5.54907608489522; player life: 0; enemy life: 100; time: 257
+
+RUN: run status: enemy: 2; fitness: -5.908082938168931; player life: 0; enemy life: 100; time: 368
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 30.20394224923463; player life: 0; enemy life: 60.0; time: 329
+
+RUN: run status: enemy: 2; fitness: 21.216174817670264; player life: 0; enemy life: 70.0; time: 325
+
+RUN: run status: enemy: 2; fitness: -5.796057750765372; player life: 0; enemy life: 100; time: 329
+
+RUN: run status: enemy: 2; fitness: -5.6240175061873385; player life: 0; enemy life: 100; time: 277
+
+RUN: run status: enemy: 2; fitness: -6.610696044717759; player life: 0; enemy life: 100; time: 743
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: -5.153291594497779; player life: 0; enemy life: 100; time: 173
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 12.225448454455591; player life: 0; enemy life: 80.0; time: 322
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 66.22234767677735; player life: 0; enemy life: 20.0; time: 323
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 66.23167900420623; player life: 0; enemy life: 20.0; time: 320
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 21.58835394814496; player life: 0; enemy life: 70.0; time: 224
+
+RUN: run status: enemy: 2; fitness: 12.225448454455591; player life: 0; enemy life: 80.0; time: 322
+
+RUN: run status: enemy: 2; fitness: 21.216174817670264; player life: 0; enemy life: 70.0; time: 325
+
+MESSAGE: state has been saved to files.
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 21.58835394814496; player life: 0; enemy life: 70.0; time: 224
+
+RUN: run status: enemy: 2; fitness: 12.225448454455591; player life: 0; enemy life: 80.0; time: 322
+
+RUN: run status: enemy: 2; fitness: -5.905361848054571; player life: 0; enemy life: 100; time: 367
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 30.25060701409175; player life: 0; enemy life: 60.0; time: 314
+
+RUN: run status: enemy: 2; fitness: 30.20394224923463; player life: 0; enemy life: 60.0; time: 329
+
+RUN: run status: enemy: 2; fitness: -5.877735781779639; player life: 0; enemy life: 100; time: 357
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 88.80956741322126; player life: 38; enemy life: 0; time: 147
+
+RUN: run status: enemy: 2; fitness: -5.783825182329737; player life: 0; enemy life: 100; time: 325
+
+RUN: run status: enemy: 2; fitness: -5.796057750765372; player life: 0; enemy life: 100; time: 329
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 21.58835394814496; player life: 0; enemy life: 70.0; time: 224
+
+RUN: run status: enemy: 2; fitness: 30.0572006248733; player life: 0; enemy life: 60.0; time: 381
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: -5.0238805208462765; player life: 0; enemy life: 100; time: 152
+
+RUN: run status: enemy: 2; fitness: -5.541263545158426; player life: 0; enemy life: 100; time: 255
 
 RUN: run status: enemy: 2; fitness: -5.7745515455444085; player life: 0; enemy life: 100; time: 322
 
-RUN: run status: enemy: 2; fitness: -5.7745515455444085; player life: 0; enemy life: 100; time: 322
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 21.22544845445559; player life: 0; enemy life: 70.0; time: 322
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 65.83038926750854; player life: 0; enemy life: 20.0; time: 478
+
+RUN: run status: enemy: 2; fitness: 21.58835394814496; player life: 0; enemy life: 70.0; time: 224
 
 RUN: run status: enemy: 2; fitness: -5.7745515455444085; player life: 0; enemy life: 100; time: 322
+
+RUN: run status: enemy: 2; fitness: 66.23167900420623; player life: 0; enemy life: 20.0; time: 320
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 12.203942249234629; player life: 0; enemy life: 80.0; time: 329
+
+RUN: run status: enemy: 2; fitness: 3.2161748176702627; player life: 0; enemy life: 90.0; time: 325
+
+RUN: run status: enemy: 2; fitness: 85.62385026742616; player life: 8; enemy life: 0; time: 177
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 21.58835394814496; player life: 0; enemy life: 70.0; time: 224
+
+RUN: run status: enemy: 2; fitness: 12.225448454455591; player life: 0; enemy life: 80.0; time: 322
+
+RUN: run status: enemy: 2; fitness: 21.58835394814496; player life: 0; enemy life: 70.0; time: 224
+
+RUN: run status: enemy: 2; fitness: 90.08188000615579; player life: 54; enemy life: 0; time: 204
+
+RUN: run status: enemy: 2; fitness: 21.58835394814496; player life: 0; enemy life: 70.0; time: 224
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 21.58835394814496; player life: 0; enemy life: 70.0; time: 224
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 21.58835394814496; player life: 0; enemy life: 70.0; time: 224
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 12.225448454455591; player life: 0; enemy life: 80.0; time: 322
+
+RUN: run status: enemy: 2; fitness: 21.58835394814496; player life: 0; enemy life: 70.0; time: 224
+
+MESSAGE: state has been saved to files.
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: -5.7745515455444085; player life: 0; enemy life: 100; time: 322
+
+RUN: run status: enemy: 2; fitness: 21.58835394814496; player life: 0; enemy life: 70.0; time: 224
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 66.21617481767026; player life: 0; enemy life: 20.0; time: 325
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 21.58835394814496; player life: 0; enemy life: 70.0; time: 224
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 30.20394224923463; player life: 0; enemy life: 60.0; time: 329
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 30.216174817670264; player life: 0; enemy life: 60.0; time: 325
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 12.165189262937396; player life: 0; enemy life: 80.0; time: 342
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 75.21617481767026; player life: 0; enemy life: 10.0; time: 325
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+MESSAGE: state has been saved to files.
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 48.216174817670264; player life: 0; enemy life: 40.0; time: 325
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: -5.780743515792329; player life: 0; enemy life: 100; time: 324
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 12.210039829102747; player life: 0; enemy life: 80.0; time: 327
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 12.216174817670263; player life: 0; enemy life: 80.0; time: 325
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 92.13703951986405; player life: 78; enemy life: 0; time: 288
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 3.2161748176702627; player life: 0; enemy life: 90.0; time: 325
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 66.21617481767026; player life: 0; enemy life: 20.0; time: 325
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 90.73703951986406; player life: 64; enemy life: 0; time: 288
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 90.27603602059675; player life: 54; enemy life: 0; time: 168
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: -5.783825182329737; player life: 0; enemy life: 100; time: 325
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 30.976119479153724; player life: 0; enemy life: 60.0; time: 152
+
+RUN: run status: enemy: 2; fitness: 30.409013019489144; player life: 0; enemy life: 60.0; time: 268
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+MESSAGE: state has been saved to files.
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 21.22544845445559; player life: 0; enemy life: 70.0; time: 322
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 21.216174817670264; player life: 0; enemy life: 70.0; time: 325
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: -5.313205979041787; player life: 0; enemy life: 100; time: 203
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: -5.886104031450156; player life: 0; enemy life: 100; time: 360
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 75.21617481767026; player life: 0; enemy life: 10.0; time: 325
+
+RUN: run status: enemy: 2; fitness: -5.886104031450156; player life: 0; enemy life: 100; time: 360
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 39.24425778641309; player life: 0; enemy life: 50.0; time: 316
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 92.58272016318507; player life: 76; enemy life: 0; time: 151
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 89.53740496697303; player life: 46; enemy life: 0; time: 158
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 92.13703951986405; player life: 78; enemy life: 0; time: 288
+
+RUN: run status: enemy: 2; fitness: -5.783825182329737; player life: 0; enemy life: 100; time: 325
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+MESSAGE: state has been saved to files.
+
+RUN: run status: enemy: 2; fitness: 48.20394224923463; player life: 0; enemy life: 40.0; time: 329
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 92.13703951986405; player life: 78; enemy life: 0; time: 288
+
+RUN: run status: enemy: 2; fitness: -5.783825182329737; player life: 0; enemy life: 100; time: 325
+
+RUN: run status: enemy: 2; fitness: -5.780743515792329; player life: 0; enemy life: 100; time: 324
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: -5.783825182329737; player life: 0; enemy life: 100; time: 325
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 92.13703951986405; player life: 78; enemy life: 0; time: 288
+
+RUN: run status: enemy: 2; fitness: 85.59051384715858; player life: 8; enemy life: 0; time: 183
+
+RUN: run status: enemy: 2; fitness: 30.144928077797573; player life: 0; enemy life: 60.0; time: 349
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: -5.780743515792329; player life: 0; enemy life: 100; time: 324
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 92.13703951986405; player life: 78; enemy life: 0; time: 288
+
+RUN: run status: enemy: 2; fitness: 92.13703951986405; player life: 78; enemy life: 0; time: 288
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: -5.783825182329737; player life: 0; enemy life: 100; time: 325
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 87.27699002086159; player life: 26; enemy life: 0; time: 205
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 39.216174817670264; player life: 0; enemy life: 50.0; time: 325
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.93703951986404; player life: 76; enemy life: 0; time: 288
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+MESSAGE: state has been saved to files.
+
+RUN: run status: enemy: 2; fitness: -5.4510384535657; player life: 0; enemy life: 100; time: 233
+
+RUN: run status: enemy: 2; fitness: 92.13703951986405; player life: 78; enemy life: 0; time: 288
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 21.22544845445559; player life: 0; enemy life: 70.0; time: 322
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 30.23794861721982; player life: 0; enemy life: 60.0; time: 318
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 88.61261419415925; player life: 38; enemy life: 0; time: 179
+
+RUN: run status: enemy: 2; fitness: 87.77399989261954; player life: 36; enemy life: 0; time: 339
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 57.216174817670264; player life: 0; enemy life: 30.0; time: 325
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 30.32324619773172; player life: 0; enemy life: 60.0; time: 292
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: -5.783825182329737; player life: 0; enemy life: 100; time: 325
+
+RUN: run status: enemy: 2; fitness: 75.08649699436172; player life: 0; enemy life: 10.0; time: 370
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: -5.796057750765372; player life: 0; enemy life: 100; time: 329
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 12.216174817670263; player life: 0; enemy life: 80.0; time: 325
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.9959933129232; player life: 72; enemy life: 0; time: 182
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: -5.796057750765372; player life: 0; enemy life: 100; time: 329
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 90.13109579777978; player life: 52; enemy life: 0; time: 159
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 12.216174817670263; player life: 0; enemy life: 80.0; time: 325
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.93703951986404; player life: 76; enemy life: 0; time: 288
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 30.22544845445559; player life: 0; enemy life: 60.0; time: 322
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: -5.834810737062605; player life: 0; enemy life: 100; time: 342
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+MESSAGE: state has been saved to files.
+
+RUN: run status: enemy: 2; fitness: 75.21003982910274; player life: 0; enemy life: 10.0; time: 327
+
+RUN: run status: enemy: 2; fitness: 92.13703951986405; player life: 78; enemy life: 0; time: 288
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 48.22544845445559; player life: 0; enemy life: 40.0; time: 322
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 30.0572006248733; player life: 0; enemy life: 60.0; time: 381
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: -5.886104031450156; player life: 0; enemy life: 100; time: 360
+
+RUN: run status: enemy: 2; fitness: 89.53740496697303; player life: 46; enemy life: 0; time: 158
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 12.247427361174367; player life: 0; enemy life: 80.0; time: 315
+
+RUN: run status: enemy: 2; fitness: 30.32324619773172; player life: 0; enemy life: 60.0; time: 292
+
+RUN: run status: enemy: 2; fitness: 92.13703951986405; player life: 78; enemy life: 0; time: 288
+
+RUN: run status: enemy: 2; fitness: 92.13703951986405; player life: 78; enemy life: 0; time: 288
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: -6.16541785423142; player life: 0; enemy life: 100; time: 476
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: -5.771441123130016; player life: 0; enemy life: 100; time: 321
+
+RUN: run status: enemy: 2; fitness: 88.61261419415925; player life: 38; enemy life: 0; time: 179
+
+RUN: run status: enemy: 2; fitness: 88.61261419415925; player life: 38; enemy life: 0; time: 179
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 91.77237888630937; player life: 74; enemy life: 0; time: 278
+
+RUN: run status: enemy: 2; fitness: 87.72700044143625; player life: 30; enemy life: 0; time: 195
+
+RUN: run status: enemy: 2; fitness: -5.886104031450156; player life: 0; enemy life: 100; time: 360
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
+
+RUN: run status: enemy: 2; fitness: 92.37964417492167; player life: 76; enemy life: 0; time: 185
 
 MESSAGE: state has been saved to files.

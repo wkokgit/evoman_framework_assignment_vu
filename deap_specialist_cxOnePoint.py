@@ -39,7 +39,7 @@ def deap_specialist_cxOnePoint(experiment_name, enemyNumber):
     )
 
     # GLOBAL VARIABLES
-    POP_SIZE = 4  # Population size
+    POP_SIZE = 50  # Population size
     GENS = 10  # Amount of generations
     # Not used CXPB = 0.5  # CXPB  is the probability with which two individuals are crossed
     MUTPB = 0.1  # MUTPB is the probability for mutating an individual
