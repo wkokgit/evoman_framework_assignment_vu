@@ -14,7 +14,7 @@ from deap import creator
 from deap import base
 import random
 import csv
-
+from random import shuffle
 import os
 
 
@@ -156,7 +156,7 @@ def deap_specialist_cxTwoPoint(experiment_name, enemyNumber, iterationnumber):
         offspring.extend((child for child in children))
 
 
-    def configureResults(pop, generation):
+    def configureResults(pop, generation,ultimate_best):
         fits = [ind.fitness.values[0] for ind in pop]
 
         length = len(pop)
@@ -172,6 +172,9 @@ def deap_specialist_cxTwoPoint(experiment_name, enemyNumber, iterationnumber):
 
         # 7.
         best = fits.index(maxFitness)
+        if best > ultimate_best:
+            print("ultimate best")
+            ultimate_best = best
         np.savetxt(experiment_name + "/best.txt", pop[best])
 
         genlist.append(generation)
@@ -185,10 +188,10 @@ def deap_specialist_cxTwoPoint(experiment_name, enemyNumber, iterationnumber):
         # file_aux.write('\n'+str(generation)+' '+str(round(maxFitness,6))+' '+str(round(mean,6))+' '+str(round(std,6))   )
         # file_aux.close()
 
-        return fits
+        return fits, ultimate_best
 
 
-    def evolution(pop):
+    def evolution(pop, ultimate_best):
         """
         Evolution Steps:
         1. Select next generation of individuals from population
@@ -203,8 +206,6 @@ def deap_specialist_cxTwoPoint(experiment_name, enemyNumber, iterationnumber):
         Args:
             pop (list): A list containing individuals
         """
-        generation0 = [ind.fitness.values[0] for ind in pop]
-        print(generation0)
         currentG = 0
         while currentG < GENS:
             currentG = currentG + 1
@@ -215,7 +216,7 @@ def deap_specialist_cxTwoPoint(experiment_name, enemyNumber, iterationnumber):
 
             # 2.
             offspring = list(map(toolbox.clone, selected))
-
+            shuffle(offspring)
             #3. #4.
             crossoverWithMutation(offspring)
 
@@ -229,7 +230,7 @@ def deap_specialist_cxTwoPoint(experiment_name, enemyNumber, iterationnumber):
             pop[:] = survivors
 
             # 7.
-            fits = configureResults(pop, currentG)
+            fits, ultimate_best = configureResults(pop, currentG, ultimate_best)
             print(fits)
             # 8.
             solutions = [pop, fits]
@@ -258,12 +259,12 @@ def deap_specialist_cxTwoPoint(experiment_name, enemyNumber, iterationnumber):
         print(iterationnumber)
         # 3.
         toolbox.evaluate(pop)
-
+        ultimate_best = -50
         # 4.
-        configureResults(pop, 0)
+        fits, ultimate_best = configureResults(pop, 0, ultimate_best)
 
         # 5.
-        evolution(pop)
+        evolution(pop, ultimate_best)
 
         # Print results to csv
         print("PRINT TO CSV")
@@ -290,4 +291,3 @@ def startUpTwoPoint():
             print("-----------TWOPOINT------------ RUN " + str(i) + " ---------------ENEMY " + str(x) + "-----------------------------")
             experiment_name_temp = experiment_name + "/" + str(i)
             deap_specialist_cxTwoPoint(experiment_name_temp, enemyNumber,iterationnumber)
-
