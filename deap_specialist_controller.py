@@ -64,16 +64,7 @@ env3 = Environment(
     speed="fastest",
 )
 
-# Compare your algorithms by enemy, testing 5 times your final best solution for
-# each of the 10 independent runs, and present the individual gain in box-plots. Note
-# that you need to calculate the means of the 5 times for each solution of the algorithm
-# for the enemy, and these means are the values that will be points in the box-plot.
-# In summary, it is a total of 3 pairs of box-plots (so 6 boxes), being one pair per
-# enemy. Additionally, do a statistical test to verify if the differences in the average of
-# these means are significant between the groups of best solutions, when comparing
-# two algorithms of an enemy
-
-# ONEPOINT
+# Runs all bests solutions for onepoint and twopoint crossover
 for aa in range(1,3):
     if aa == 1:
         cross = "OnePoint"
