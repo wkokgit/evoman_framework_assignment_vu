@@ -90,9 +90,9 @@ for aa in range(1,3):
                 if x == 1:
                     f, p, e, t = env1.play(sol) # return fitness, self.player.life, self.enemy.life, self.time
                 if x == 2:
-                    f, p, e, t = env1.play(sol) # return fitness, self.player.life, self.enemy.life, self.time
+                    f, p, e, t = env2.play(sol) # return fitness, self.player.life, self.enemy.life, self.time
                 if x == 3:
-                    f, p, e, t = env1.play(sol) # return fitness, self.player.life, self.enemy.life, self.time
+                    f, p, e, t = env3.play(sol) # return fitness, self.player.life, self.enemy.life, self.time
                 individual_gains.append(p - e) # player.life - enemy.life
             print(individual_gains)
             mean = sum(individual_gains) / len(individual_gains)
