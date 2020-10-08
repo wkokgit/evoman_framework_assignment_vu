@@ -53,7 +53,7 @@ def get_env(enemy):
 
 # Runs all bests solutions for onepoint and twopoint crossover
 for cross in ["OnePoint", "TwoPoint"]:
-    for group in ["group268", "group467"]:
+    for group in ["group78", "group13"]:
         folder = experiment_name + "/" + cross + "/" + group
 
         if not os.path.exists(folder):

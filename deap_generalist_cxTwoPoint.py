@@ -46,9 +46,9 @@ def deap_generalist_twopoint(experiment_name, enemies_in_group, iteration_number
     )
 
     # GLOBAL VARIABLES
-    POP_SIZE = 50  # Population size
-    GENS = 10  # Amount of generations
-    MUTPB = 0.2  # MUTPB is the probability for mutating an individual
+    POP_SIZE = 100  # Population size
+    GENS = 15  # Amount of generations
+    MUTPB =0.2  # MUTPB is the probability for mutating an individual
     toolbox = base.Toolbox()
     n_vars = (env.get_num_sensors()+1)*n_hidden_neurons + (n_hidden_neurons+1)*5
 
@@ -111,7 +111,7 @@ def deap_generalist_twopoint(experiment_name, enemies_in_group, iteration_number
         toolbox.register("mate", tools.cxTwoPoint)
 
         # registers mutation function: We use bit-flipping
-        toolbox.register("mutate", tools.mutShuffleIndexes, indpb=0.1) # Because it already changes 2 values
+        toolbox.register("mutate", tools.mutShuffleIndexes, indpb=0.2) # Because it already changes 2 values
 
         # registers selection function: We select using tournament selection of 2.
         toolbox.register("select", tools.selTournament, tournsize=2)
@@ -286,12 +286,13 @@ def time_estimator(current_group, current_run):
     elapsed_time = time.process_time() - time_at_start
 
     runs_done = ((current_group - 1) * 10) + current_run
-    runs_left = 20 - runs_done
-    estimated_time_left = (elapsed_time / runs_done) * runs_left
+    runs_left = 2 - runs_done
+    estimated_time_left = (elapsed_time / runs_done) * runs_left * 2 #the * 2 is for Onepoint and Twopoint
 
     m, s = divmod(estimated_time_left, 60)
     h, m = divmod(m, 60)
     print("Estimated time left: " + str(int(h)) + " hours, " + str(int(m)) + " minutes, and " + str(int(s)) + " seconds")
+    print("time = " + str(int(elapsed_time)))
 
 #testing the multimode
 #deap_generalist("deap_generalist",[1,2,3,4],5)
@@ -300,7 +301,8 @@ def startup_twopoint():
     print("------------------------------- START TWOPOINT -------------------------------------------------------")
     # --------- STARTS PROGRAM FOR EVERY ENEMY GROUP 10 TIMES ---------------
     iteration_number = 0
-    enemy_groups = {1: [2,6,8], 2: [4,6,7]}
+    # enemy_groups = {1: [2,6,8], 2: [4,6,7]}
+    enemy_groups = {1: [1,3], 2: [7,8]}
     for group_number, enemies_in_group in enemy_groups.items():
         group_name = ''.join(str(x) for x in enemies_in_group)
         print("-----------TWOPOINT------------ GROUP " + str(group_name) + " -------------------------------------------------------")
